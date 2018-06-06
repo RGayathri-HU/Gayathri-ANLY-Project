@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## The Impact of Student-Faculty Interaction on Students’ Retention in Undergraduate Communities
 
-You can use the [editor on GitHub](https://github.com/RGayathri-HU/Gayathri-ANLY-Project/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+The educational institution must overcome various obstacles to produce the best teaching
+and better talents to the nation, one of the prominent and most widely observed crises in every
+educational institution is student dropouts. Student dropouts are not something which is
+identified in recent year, student dropouts and early leavers are one among the major problem
+every institution experience since the educational institutions were established. Student dropouts
+at undergraduate universities is a problem that affects students, faculties, administration and the
+institution. Therefore, the main purpose of this research is to understand what measures Universities can take to retain their students and increase retention.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Code
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```{r}
+library(readxl)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+```{r}
+Project_Data <- read_excel("C:/Users/Gayathri Vinoth/Desktop/ANLY-699-Project/Data/ANLY-699-Project-Data.xlsx")
+```
 
-### Jekyll Themes
+```{r}
+hist(Project_Data$Q13b, 
+     main="Histogram for Quality of Student-Faculty Interaction", 
+     xlab="Student-Faculty")
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RGayathri-HU/Gayathri-ANLY-Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+hist(Project_Data$Q14b, 
+     main="Histogram for Univeristy Support to help students succeed academically", 
+     xlab="Student support")
+```
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
